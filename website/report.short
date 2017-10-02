@@ -44,15 +44,37 @@ html
                 span,icon
                     >< i,fa,fa-info,bd-emoji aria-hidden="true"
                 About
-    form
-        ,field
-            ,file,is-centered,is-boxed,is-success,has-name
-                label,file-label
-                    > input,file-input type="file" name="resume"
-                    span,file-cta
-                        span,file-icon
-                            >< i,fa,fa-upload
-                        span,file-label
-                            Filename
-                    span,file-name
-                        Screen Shot 2017-07-29 at 15.54.25.png
+    section,hero,is-primary
+        ,hero-body
+            ,container
+                ,columns,is-vcentered
+                    ,column
+                        p,title
+                            Found a mess in Seattle? Report it!
+                        p,subtitle
+                            Let's keep Seattle clean <strong>together</strong>.
+                    ,column,is-narrow
+                        >< i,fa,fa-trash aria-hidden="true" style="font-size: 400%"
+    section,section
+        ,container
+            form
+                ,field
+                    label,label
+                        Name
+                    > input,input type="text" placeholder="Mess short name"
+                ,field
+                    label,label
+                        Description
+                    ,control
+                        >< textarea,textarea placeholder="Detailed description of mess"
+                ,field
+                    ,file,is-centered,is-boxed,is-success,has-name
+                        label,file-label
+                            > input,file-input type="file" name="resume"
+                            span,file-cta
+                                span,file-icon
+                                    >< i,fa,fa-upload
+                                span,file-label
+                                    Filename
+                            span,file-name
+                                Screen Shot 2017-07-29 at 15.54.25.png

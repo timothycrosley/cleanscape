@@ -21,110 +21,115 @@
         }
 
         #map {
-           position: absolute;
-           top: 7%;
-           bottom: 0;
-           width: 100%;
-           height: 86%
+           height: 500px;
         }
     </style>
-  </head>
-  <body>
-    <nav role="navigation" aria-label="main navigation" class="navbar">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img alt="Bulma: a modern CSS framework based on Flexbox" width="100px" src="logo.png" />
-            </a>
-            <a class="navbar-item" href="index.html">
-                <span class="icon">
-                    <i aria-hidden="true" class="fa fa-compass bd-emoji"></i>
-                </span>
-                Explore
-            </a>
-            <a class="navbar-item" href="report.html">
-                <span class="icon">
-                    <i aria-hidden="true" class="fa fa-crosshairs bd-emoji"></i>
-                </span>
-                Report
-            </a>
-            <a class="navbar-item" href="about.html">
-                <span class="icon">
-                    <i aria-hidden="true" class="fa fa-info bd-emoji"></i>
-                </span>
-                About
-            </a>
-        </div>
-    </nav>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-vcentered">
-                    <div class="column">
-                        <p class="title">
-                            Found a mess in Seattle? Report it!
-                        </p>
-                        <p class="subtitle">
-                            Let's keep Seattle clean <strong>together</strong>.
-                        </p>
-                    </div>
-                    <div class="column is-narrow">
-                        <i aria-hidden="true" style="font-size: 400%" class="fa fa-trash"></i>
+    <body>
+        <nav role="navigation" aria-label="main navigation" class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img alt="Bulma: a modern CSS framework based on Flexbox" width="100px" src="logo.png" />
+                </a>
+                <a class="navbar-item" href="index.html">
+                    <span class="icon">
+                        <i aria-hidden="true" class="fa fa-compass bd-emoji"></i>
+                    </span>
+                    Explore
+                </a>
+                <a class="navbar-item" href="report.html">
+                    <span class="icon">
+                        <i aria-hidden="true" class="fa fa-crosshairs bd-emoji"></i>
+                    </span>
+                    Report
+                </a>
+                <a class="navbar-item" href="about.html">
+                    <span class="icon">
+                        <i aria-hidden="true" class="fa fa-info bd-emoji"></i>
+                    </span>
+                    About
+                </a>
+            </div>
+        </nav>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <p class="title">
+                                Found a mess in Seattle? Report it!
+                            </p>
+                            <p class="subtitle">
+                                Let's keep Seattle clean <strong>together</strong>.
+                            </p>
+                        </div>
+                        <div class="column is-narrow">
+                            <i aria-hidden="true" style="font-size: 400%" class="fa fa-trash"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <form>
-                <div class="field">
-                    <label class="label">
-                        Name
-                    </label>
-                    <input type="text" placeholder="A short, but descriptive, name of the mess" class="input" />
-                </div>
-                <div class="field">
-                    <label class="label">
-                        Description
-                    </label>
-                    <div class="control">
-                        <textarea placeholder="Detailed description of mess" class="textarea"></textarea>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="file is-centered is-boxed is-success has-name">
-                        <label class="file-label">
-                            <input type="file" name="resume" class="file-input" />
-                            <span class="file-cta">
-                                <span class="file-icon">
-                                    <i class="fa fa-upload"></i>
-                                </span>
-                                <span class="file-label">
-                                    Filename
-                                </span>
-                            </span>
-                            <span class="file-name">
-                                Screen Shot 2017-07-29 at 15.54.25.png
-                            </span>
+        </section>
+        <section class="section">
+            <div class="container">
+                <form>
+                    <div class="field">
+                        <label class="label">
+                            Name
                         </label>
+                        <input type="text" placeholder="A short, but descriptive, name of the mess" class="input" />
                     </div>
-                </div>
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-primary">
-                            Report mess now!
-                        </button>
+                    <div class="field">
+                        <label class="label">
+                            Description
+                        </label>
+                        <div class="control">
+                            <textarea placeholder="Detailed description of mess" class="textarea"></textarea>
+                        </div>
                     </div>
-                    <div class="control">
-                        <button class="button is-link">
-                            <a href="index.html">
-                                No mess here...
-                            </a>
-                        </button>
+                    <div class="field">
+                        <label class="label">
+                            Photo of mess
+                        </label>
+                        <div has-name,is-fullwidth class="file">
+                            <label class="file-label">
+                                <input type="file" name="resume" class="file-input" />
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fa fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a file…
+                                    </span>
+                                </span>
+                                <span class="file-name">
+                                    Screen Shot 2017-07-29 at 15.54.25.png
+                                </span>
+                            </label>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    </section>
-  </body>
+                    <div class="field">
+                        <div class="container map-container">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-primary">
+                                Report mess now!
+                            </button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-link">
+                                <a href="index.html">
+                                    No mess here...
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <script src="static/js/report.js"></script>
+    </body>
+  </head>
 </html>

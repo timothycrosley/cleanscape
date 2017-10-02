@@ -21,68 +21,70 @@ html
         }
 
         #map {
-           position: absolute;
-           top: 7%;
-           bottom: 0;
-           width: 100%;
-           height: 86%
+           height: 500px;
         }
-  body
-    nav,navbar role="navigation" aria-label="main navigation"
-        ,navbar-brand
-            a,navbar-item@index.html
-                > img!logo.png alt="Bulma: a modern CSS framework based on Flexbox" width="100px"
-            a,navbar-item@index.html
-                span,icon
-                    >< i,fa,fa-compass,bd-emoji aria-hidden="true"
-                Explore
-            a,navbar-item@report.html
-                span,icon
-                    >< i,fa,fa-crosshairs,bd-emoji aria-hidden="true"
-                Report
-            a,navbar-item@about.html
-                span,icon
-                    >< i,fa,fa-info,bd-emoji aria-hidden="true"
-                About
-    section,hero,is-primary
-        ,hero-body
+    body
+        nav,navbar role="navigation" aria-label="main navigation"
+            ,navbar-brand
+                a,navbar-item@index.html
+                    > img!logo.png alt="Bulma: a modern CSS framework based on Flexbox" width="100px"
+                a,navbar-item@index.html
+                    span,icon
+                        >< i,fa,fa-compass,bd-emoji aria-hidden="true"
+                    Explore
+                a,navbar-item@report.html
+                    span,icon
+                        >< i,fa,fa-crosshairs,bd-emoji aria-hidden="true"
+                    Report
+                a,navbar-item@about.html
+                    span,icon
+                        >< i,fa,fa-info,bd-emoji aria-hidden="true"
+                    About
+        section,hero,is-primary
+            ,hero-body
+                ,container
+                    ,columns,is-vcentered
+                        ,column
+                            p,title
+                                Found a mess in Seattle? Report it!
+                            p,subtitle
+                                Let's keep Seattle clean <strong>together</strong>.
+                        ,column,is-narrow
+                            >< i,fa,fa-trash aria-hidden="true" style="font-size: 400%"
+        section,section
             ,container
-                ,columns,is-vcentered
-                    ,column
-                        p,title
-                            Found a mess in Seattle? Report it!
-                        p,subtitle
-                            Let's keep Seattle clean <strong>together</strong>.
-                    ,column,is-narrow
-                        >< i,fa,fa-trash aria-hidden="true" style="font-size: 400%"
-    section,section
-        ,container
-            form
-                ,field
-                    label,label
-                        Name
-                    > input,input type="text" placeholder="A short, but descriptive, name of the mess"
-                ,field
-                    label,label
-                        Description
-                    ,control
-                        >< textarea,textarea placeholder="Detailed description of mess"
-                ,field
-                    ,file,is-centered,is-boxed,is-success,has-name
-                        label,file-label
-                            > input,file-input type="file" name="resume"
-                            span,file-cta
-                                span,file-icon
-                                    >< i,fa,fa-upload
-                                span,file-label
-                                    Filename
-                            span,file-name
-                                Screen Shot 2017-07-29 at 15.54.25.png
-                ,field,is-grouped
-                    ,control
-                        button,button,is-primary
-                            Report mess now!
-                    ,control
-                        button,button,is-link
-                            a@index.html
-                                No mess here...
+                form
+                    ,field
+                        label,label
+                            Name
+                        > input,input type="text" placeholder="A short, but descriptive, name of the mess"
+                    ,field
+                        label,label
+                            Description
+                        ,control
+                            >< textarea,textarea placeholder="Detailed description of mess"
+                    ,field
+                        label,label
+                            Photo of mess
+                        ,file has-name,is-fullwidth
+                            label,file-label
+                                > input,file-input type="file" name="resume"
+                                span,file-cta
+                                    span,file-icon
+                                        >< i,fa,fa-upload
+                                    span,file-label
+                                        Choose a file…
+                                span,file-name
+                                    Screen Shot 2017-07-29 at 15.54.25.png
+                    ,field
+                        ,container,map-container
+                            >< #map
+                    ,field,is-grouped
+                        ,control
+                            button,button,is-primary
+                                Report mess now!
+                        ,control
+                            button,button,is-link
+                                a@index.html
+                                    No mess here...
+        >< script!static/js/report.js

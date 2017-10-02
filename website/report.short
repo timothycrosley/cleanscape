@@ -1,0 +1,58 @@
+!! html
+html
+  head
+    > meta charset='utf-8'
+    title | Cleanscape
+    > meta$viewport content='initial-scale=1,maximum-scale=1,user-scalable=no'
+    >< script!https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js
+    > link@/stylesheets/screen.css media="screen, projection" rel="stylesheet" type="text/css"
+    > link@https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css rel='stylesheet'
+    > link@logo/16.png rel="icon" type="image/png" sizes="16x16"
+    > link@logo/32.png rel="icon" type="image/png" sizes="32x32"
+    > link@logo/64.png rel="icon" type="image/png" sizes="64x64"
+    > link@logo/128.png rel="icon" type="image/png" sizes="128x128"
+    > link@logo/256.png rel="icon" type="image/png" sizes="256x256"
+    > link@https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel="stylesheet"
+    > link@https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css rel="stylesheet"
+    style VERBATIM
+        body {
+           margin: 0;
+           padding: 0;
+        }
+
+        #map {
+           position: absolute;
+           top: 7%;
+           bottom: 0;
+           width: 100%;
+           height: 86%
+        }
+  body
+    nav,navbar role="navigation" aria-label="main navigation"
+        ,navbar-brand
+            a,navbar-item@index.html
+                > img!logo.png alt="Bulma: a modern CSS framework based on Flexbox" width="100px"
+            a,navbar-item@index.html
+                span,icon
+                    >< i,fa,fa-compass,bd-emoji aria-hidden="true"
+                Explore
+            a,navbar-item@report.html
+                span,icon
+                    >< i,fa,fa-crosshairs,bd-emoji aria-hidden="true"
+                Report
+            a,navbar-item@about.html
+                span,icon
+                    >< i,fa,fa-info,bd-emoji aria-hidden="true"
+                About
+    form
+        ,field
+            ,file,is-centered,is-boxed,is-success,has-name
+                label,file-label
+                    > input,file-input type="file" name="resume"
+                    span,file-cta
+                        span,file-icon
+                            >< i,fa,fa-upload
+                        span,file-label
+                            Filename
+                    span,file-name
+                        Screen Shot 2017-07-29 at 15.54.25.png

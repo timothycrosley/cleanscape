@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Cleanscape</title>
+    <meta content='initial-scale=1,maximum-scale=1,user-scalable=no' name="viewport" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js"></script>
+    <link media="screen, projection" rel="stylesheet" type="text/css" href="/stylesheets/screen.css" />
+    <link rel='stylesheet' href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="logo/64.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="logo/128.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="logo/256.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css" />
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+        }
+
+        #map {
+           position: absolute;
+           top: 7%;
+           bottom: 0;
+           width: 100%;
+           height: 86%
+        }
+    </style>
+  </head>
+  <body>
+    <nav role="navigation" aria-label="main navigation" class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img alt="Bulma: a modern CSS framework based on Flexbox" width="100px" src="logo.png" />
+            </a>
+            <a class="navbar-item" href="index.html">
+                <span class="icon">
+                    <i aria-hidden="true" class="fa fa-compass bd-emoji"></i>
+                </span>
+                Explore
+            </a>
+            <a class="navbar-item" href="report.html">
+                <span class="icon">
+                    <i aria-hidden="true" class="fa fa-crosshairs bd-emoji"></i>
+                </span>
+                Report
+            </a>
+            <a class="navbar-item" href="about.html">
+                <span class="icon">
+                    <i aria-hidden="true" class="fa fa-info bd-emoji"></i>
+                </span>
+                About
+            </a>
+        </div>
+    </nav>
+    <form>
+        <div class="field">
+            <div class="file is-centered is-boxed is-success has-name">
+                <label class="file-label">
+                    <input type="file" name="resume" class="file-input" />
+                    <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fa fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                            Filename
+                        </span>
+                    </span>
+                    <span class="file-name">
+                        Screen Shot 2017-07-29 at 15.54.25.png
+                    </span>
+                </label>
+            </div>
+        </div>
+    </form>
+  </body>
+</html>

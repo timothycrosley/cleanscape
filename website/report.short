@@ -78,3 +78,11 @@ html
                                     Filename
                             span,file-name
                                 Screen Shot 2017-07-29 at 15.54.25.png
+                ,field,is-grouped
+                    ,control
+                        button,button,is-primary
+                            Report mess now!
+                    ,control
+                        button,button,is-link
+                            a@index.html
+                                No mess here...

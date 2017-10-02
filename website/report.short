@@ -61,7 +61,7 @@ html
                 ,field
                     label,label
                         Name
-                    > input,input type="text" placeholder="Mess short name"
+                    > input,input type="text" placeholder="A short, but descriptive, name of the mess"
                 ,field
                     label,label
                         Description

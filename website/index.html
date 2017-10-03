@@ -56,31 +56,6 @@
         </div>
     </nav>
     <div id="map"></div>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3RoeWNyb3NsZXkiLCJhIjoiY2o3d3lkaGkzNWhwcDJ3dDZqd2hqdDIzdCJ9.hVbXFoGCYADmX-M6K9gn7w'; // replace this with your access token
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/timothycrosley/cj8467x570gjd2rqivp8u35ye' // replace this with your style URL
-        });
-        // code from the next step will go here
-
-        map.on('click', function(e) {
-            var features = map.queryRenderedFeatures(e.point, {
-                layers: ['messes'] // replace this with the name of the layer
-            });
-
-            if (!features.length) {
-                return;
-            }
-
-            var feature = features[0];
-
-            var popup = new mapboxgl.Popup({ offset: [0, -15] })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p><img src="' + feature.properties.image + '" height="200" width="200">')
-                .setLngLat(feature.geometry.coordinates)
-                .addTo(map);
-        });
-    </script>
+    <script src="static/js/explore.js"></script>
   </body>
 </html>

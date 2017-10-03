@@ -72,3 +72,9 @@ venv/
 
 # Environment specific
 .env
+
+# Compiled files
+.js
+.css
+.html
+

@@ -70,11 +70,8 @@ venv/
 # Cython
 *.c
 
-# Environment specific
-.env
-
 # Compiled files
-.js
-.css
-.html
+*.js
+*.css
+*.html
 

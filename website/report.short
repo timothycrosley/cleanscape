@@ -28,7 +28,7 @@ html
         nav,navbar role="navigation" aria-label="main navigation"
             ,navbar-brand
                 a,navbar-item@index.html
-                    > img!logo.png alt="Bulma: a modern CSS framework based on Flexbox" width="100px"
+                    > img!static/logo.png alt="Bulma: a modern CSS framework based on Flexbox" width="100px"
                 a,navbar-item@index.html
                     span,icon
                         >< i,fa,fa-compass,bd-emoji aria-hidden="true"
@@ -54,7 +54,7 @@ html
                             >< i,fa,fa-trash aria-hidden="true" style="font-size: 400%"
         section,section
             ,container
-                form
+                form target=submit
                     ,field
                         label,label
                             Name

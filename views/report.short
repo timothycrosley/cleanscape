@@ -49,7 +49,7 @@ html
                             p,title
                                 Found a mess in Seattle? Report it!
                             p,subtitle
-                                Let's keep Seattle clean <strong>together</strong>.
+                                Let's keep Seattle clean <strong>&nbsp;together</strong>.
                         ,column,is-narrow
                             >< i,fa,fa-trash aria-hidden="true" style="font-size: 400%"
         section,section

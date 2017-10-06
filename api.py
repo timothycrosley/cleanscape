@@ -2,10 +2,21 @@ import hug
 import piexif
 from cloudinary import uploader
 from uuid import uuid4 as generate_id
-from .config import MESSES_DATASET
-from .resources import datasets
+from config import MESSES_DATASET
+from resources import datasets
+import controllers
 import reverse_geocoder
+from functools import partial
 from mapbox import Uploader
+
+app = hug.get(output=hug.output_format.suffix({'/js': hug.output_format.json},
+                                              hug.output_format.html)).suffixes('/js')
+html = partial(hug.transform.suffix, {'/js': None})
+
+
+@hug.static('/static')
+def my_static_dirs():
+    return ('media/images', 'client_side/js')
 
 
 @hug.get()
@@ -14,8 +25,8 @@ def messes(datasets: datasets):
     return datasets.list_features(MESSES_DATASET).json()['features']
 
 
-@hug.post('/mess')
-def report_mess(datasets: datasets, lat: hug.types.float_number, lon: hug.types.float_number,
+@app.transform(html(controllers.report))
+def mess(datasets: datasets, lat: hug.types.float_number, lon: hug.types.float_number,
                 image, name: hug.types.text="", description: hug.types.text=""):
     """Report a mess at a specific lat/lon optionally with a bounty attached"""
     if reverse_geocoder.search((lat, lon))[0]['name'].lower() not in ['seattle', 'shoreline']:
@@ -42,7 +53,7 @@ def delete_mess(datasets: datasets, id: hug.types.text):
 
 
 @hug.post()
-def add_bounty(datasets: datasets, mess_id: hug.types.text(), email, amount=""):
+def add_bounty(datasets: datasets, mess_id: hug.types.text, email, amount=""):
     """Adds a bounty to the specified mess"""
 
 
@@ -50,4 +61,5 @@ def add_bounty(datasets: datasets, mess_id: hug.types.text(), email, amount=""):
 def report_cleaned(datasets: datasets, id: hug.types.text, email):
     mess = datasets.read_feature(id)
     for email, amount in mess.get('properties', {}).get('bounties', {}).items():
-        venmo.request_money(
+        # venmo.request_money(
+        pass

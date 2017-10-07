@@ -6,7 +6,7 @@ html
     > meta$viewport content='initial-scale=1,maximum-scale=1,user-scalable=no'
     >< script!https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js
     > link@static/stylesheets/screen.css media="screen, projection" rel="stylesheet" type="text/css"
-    > link@static/stylesheets/report.css media="screen, projection" rel="stylesheet" type="text/css"
+    > link@static/stylesheets/explore.css media="screen, projection" rel="stylesheet" type="text/css"
     > link@https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css rel='stylesheet'
     > link@static/images/icons/16.png rel="icon" type="image/png" sizes="16x16"
     > link@static/images/icons/32.png rel="icon" type="image/png" sizes="32x32"
@@ -32,8 +32,5 @@ html
                 span,icon
                     >< i,fa,fa-info,bd-emoji aria-hidden="true"
                 About
-    ,container
-        h1
-            > img!static/images/logo.png alt="Cleanscape"
-        p
-            Cleanscape is a website that enables Seattlites to report messes they find and attach bounties to them.
+    >< #map
+    >< script!static/explore.js

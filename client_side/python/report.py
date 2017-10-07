@@ -11,6 +11,8 @@ canvas = map.getCanvasContainer()
 def mouse_down(event):
     var coords = event.lngLat
     points.features[0].geometry.coordinates = [coords.lng, coords.lat]
+    document.getElementById('lat').value = coords.lat
+    document.getElementById('lon').value = coords.lng
     map.getSource('point').setData(points)
 
 

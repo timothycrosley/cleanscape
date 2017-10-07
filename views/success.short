@@ -2,6 +2,7 @@
 html
   head
     > meta charset='utf-8'
+    > meta http-equiv="refresh" content="3;url=messes" />
     title | Cleanscape
     > meta$viewport content='initial-scale=1,maximum-scale=1,user-scalable=no'
     >< script!https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js
@@ -33,7 +34,6 @@ html
                     >< i,fa,fa-info,bd-emoji aria-hidden="true"
                 About
     ,container
-        h1
-            > img!static/images/logo.png alt="Cleanscape"
-        p
-            Cleanscape is a website that enables Seattlites to report messes they find and attach bounties to them.
+        div,notification,is-primary#success
+            Thank you for reporting this mess! It has successfully been reported and will show up in the list of messes
+            withing the next few minutes.

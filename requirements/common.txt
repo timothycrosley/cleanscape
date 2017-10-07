@@ -2,3 +2,4 @@ hug==2.3.1
 piexif==1.0.13
 cloudinary==1.8.0
 reverse-geocoder==1.5.1
+blox==0.3.3

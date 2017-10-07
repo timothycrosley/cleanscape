@@ -33,6 +33,7 @@ def my_static_dirs():
     return ('media', 'client_side/js')
 
 
+@hug.cli()
 @app.transform(html(controllers.explore))
 def messes(datasets: datasets):
     """Returns a list of all known messes, their GPS coordinates and bounty"""
@@ -89,3 +90,7 @@ def report_cleaned(datasets: datasets, id: hug.types.text, email):
 @app.transform(html(controllers.about))
 def about():
     return
+
+
+if __name__ == '__main__':
+    __hug__.cli()
